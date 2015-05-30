@@ -68,6 +68,8 @@ normal()
     border 0
     background #353840
     width 150px 
+    -webkit-border-radius 0
+    border-radius 0
     -webkit-appearance textfield
     color #fff
     padding-left 15px
@@ -286,9 +288,9 @@ normal()
         
 #wrapper
   .header-in
-    background url('../images/headerin.png')
-    background-size cover
+    background url('../images/header.jpg') 
     background-attachment fixed
+    background-position 50% 10%
     margin-top 50px
     height 173px
     .container
@@ -308,7 +310,9 @@ normal()
         color #2A2E78
         font-weight 600
         +mobile()
-          display none
+          margin-left 2vw
+          text-align left
+          width 260px
   .content
     background #fff
     min-height 855px
@@ -319,42 +323,63 @@ normal()
         width 25vw
         font-family proxima
         float left
-        +mobile()
-          display none
-        +tablet()
-          display none
-        +normal()
-          display none
         
         .active-li
           border-bottom 4px bl solid
           background #E9E9E9
           color #1422E3
+          +tablet()
+            border-width 3px
+          +mobile()
+            border-width 3px
           a
             color bl
         // width 373px  
         ul
-          margin-left 57px
+          margin-left 4vw
           margin-top 52px
+          +tablet()
+            margin-top 0
+            margin-left 0
+          +mobile()
+            margin-top 0
+            margin-left 0
           li
             font-weight 600
             font-size 20px
-            padding 15px 0px 10px 15px
+            padding 15px 1px 10px 15px
             width 200px
             line-height 24px
-            height 50px
+            height 35px
+            +tablet()
+              width 100vw
+              padding 15px 0 0 0 
+              text-align center
+            +mobile()
+              width 100vw
+              padding 15px 0 0 0 
+              text-align center
             &:hover
               background #E9E9E9
             a
               text-decoration none
               color #151D84
-              
+          
               
             
       .right-side
         width 75%
         font-family proxima
         float left
+        +normal()
+          margin-left 65px
+          width 60%
+        +tablet()
+          margin-left 7vw
+          width 90%
+        +mobile()
+          width 100%
+          margin-left 5vw
         h1 
           font-weight bold
           font-size 28px
@@ -362,7 +387,10 @@ normal()
         img
           margin-top 45px
           width 65vw
-          
+          +mobile()
+            width 90vw 
+          +tablet()
+            width 85vw         
         .photo
             height 450px
             margin-top -45px
@@ -375,11 +403,19 @@ normal()
           width 85%
           line-height 24px
           margin-top 25px
+          +normal()
+            width 100%
+          +tablet()
+            width 94%
           &:last-child
             margin-bottom 50px
       .right-side-2
         font-family proxima
         float left
+        +tablet()
+          margin-left 6vw
+        +mobile()
+          margin-left 6vw
         h1 
           font-weight bold
           font-size 28px
@@ -405,11 +441,12 @@ normal()
             font-size 13px
             outline none
             &::after
-              content '>'
-              font-size 15px
+              content 'СЛЕДУЮЩАЯ СТРАНИЦА >'
+              font-size 12px
               margin-left 5px
+              +mobile()
+                content 'СЛЕДУЮЩАЯ >'
           .prevpage
-            display none
             margin-bottom 50px
             float left
             margin-top 50px
@@ -420,14 +457,19 @@ normal()
             font-size 13px
             outline none
             &::before
-              content '<'
-              font-size 15px
-              margin-right 5px
+              content '< ПРЕДЫДУЩАЯ СТРАНИЦА'
+              font-size 12px
+              margin-right 
+              +mobile()
+                content '< ПРЕДЫДУЩАЯ'
           .block
             margin-top 25px
-            max-width 600px
-            min-width 600px
+            width 45vw
             cursor pointer
+            +tablet()
+              width 85vw
+            +mobile()
+              width 85vw
             &:last-child
               margin-bottom 50px
             .title
@@ -486,7 +528,11 @@ normal()
         font-family proxima
         text-align center
         float right
-        margin-right 84px
+        margin-right 2vw
+        +tablet()
+          display none
+        +mobile()
+          display none
         .title
           font-size 18px
           font-weight 600
@@ -582,7 +628,8 @@ normal()
         margin-top 21vw
   .pre-footer
     height 173px
-    background url('../images/headerin.png') no-repeat
+    background url('../images/header.jpg') no-repeat
+    background-position 50% 90%
     background-size cover
     background-attachment fixed
     .container
@@ -597,7 +644,6 @@ normal()
         color #2A2E78
         font-weight 600
       ul
-        width 900px
         margin 0 auto
         margin-top 30px
         li

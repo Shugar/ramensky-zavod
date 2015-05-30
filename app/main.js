@@ -7,6 +7,7 @@ $(document).ready(function() {
         autoScrolling: true,
         fitToSection: true,
         scrollBar: false,
+        responsive: '800',
         resize: true,
         easingcss3: 'ease-in-out',
         touchSensitivity: 15,
