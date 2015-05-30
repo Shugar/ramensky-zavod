@@ -155,7 +155,7 @@ normal()
       display none
       width 100%
       margin 0 auto
-      margin-top 40px
+      margin-top 50px
       li
         background #151515
         transition background 0.3s
@@ -307,15 +307,25 @@ normal()
         font-family proxima
         color #2A2E78
         font-weight 600
+        +mobile()
+          display none
   .content
     background #fff
     min-height 855px
+    width 100vw
     .container
       text-align left
       .left-side
-        min-width 25vw
+        width 25vw
         font-family proxima
         float left
+        +mobile()
+          display none
+        +tablet()
+          display none
+        +normal()
+          display none
+        
         .active-li
           border-bottom 4px bl solid
           background #E9E9E9
@@ -351,6 +361,15 @@ normal()
           margin-top 71px
         img
           margin-top 45px
+          width 65vw
+          
+        .photo
+            height 450px
+            margin-top -45px
+            float right
+            margin-left 15px
+            margin-bottom 50px
+            clearfix()
         p
           font-size 18px
           width 85%

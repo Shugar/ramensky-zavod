@@ -1,0 +1,126 @@
+doctype html
+head
+  meta(name="viewport" content="width=device-width")
+  link(rel="stylesheet" href="stylesheets/app.css")
+  link(rel="stylesheet" href="http://i.icomoon.io/public/temp/58ba121031/UntitledProject/style.css")
+  meta(charset="utf-8")
+  title Раменский
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+
+  script.
+    require('main');
+    require('coffee');
+
+
+body
+  #header
+    a(href="index.html")
+      img(src="images/logo.png")
+    input(type="search" placeholder="Поиск")
+    button.gosearch
+    nav(id="nav" role="navigation")
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+          a(href="#") ОБРАТНАЯ СВЯЗЬ
+
+    nav(id="nav-mobile" role="navigation")
+      span.menu-btn меню  
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+          a(href="#") ОБРАТНАЯ СВЯЗЬ
+
+  #wrapper
+    .header-in
+      .container
+        img(src="images/logobig.png")
+        p РАМЕНСКИЙ ПРИБОРОСТРОИТЕЛЬНЫЙ ЗАВОД
+    .content
+      .container
+        .left-side
+          ul
+            li
+              a(href="info.html") РПЗ сегодня
+            li.active-li
+              a(href="info-2.html") История
+            li
+              a(href="info-3.html") Миссия
+            li
+              a(href="info-4.html") Руководство
+            li
+              a(href="info-5.html") Закупки
+            li
+              a(href="info-6.html") Раскрытие информации
+            li
+              a(href="info-7.html") Партнеры
+            li
+              a(href="info-8.html") Благодарности и награды
+        .right-side
+          h1 ИСТОРИЯ
+          img(src="images/dontknow.png")
+          p
+            |Прежде чем стать одним из ведущих в отрасли, Раменский приборостроительный завод прошел трудный путь становления и развития – от предвоенного строительства и организации в 1939 г., выполнения заказов фронта в эвакуации в Ижевске, коренной реконструкции в 60-е годы до непрерывного освоения и выпуска все усложняющейся техники в последующие десятилетия.
+            br
+            br
+            |Это был путь от простейших измерительных приборов до многофункциональных пилотажно-навигационных систем и комплексов, установленных на большинстве военных и гражданских самолетов и вертолетов.
+            br
+            br
+            |В 1961 г. за заслуги в освоении новой техники завод был награжден орденом Трудового Красного Знамени.
+            br
+            br
+            |В 1972 г. завод первым в стране освоил выпуск поплавковых гироскопов и акселерометров и на их базе - инерциальных систем нового поколения, позволивших в 2 раза повысить точность навигации.
+            br
+            br
+            |В 1978 г. разработанная на заводе система качества «СОВКИП» была зарегистрирована за № 1 в отрасли и признана лучшей в стране. Опыт работы коллектива был представлен в Политехническом музее и на ВДНХ.
+            br
+            br
+            |В период 1985 – 1990 гг. РПЗ 19 кварталов назывался в числе победителей в соревновании предприятий отрасли.
+            br
+            br
+            |В 1985 г. за успехи в труде завод занесен на Всесоюзную Доску Почета на ВДНХ СССР.
+            br
+            br
+            |В 1992 г. завод стал акционерным обществом.
+            br
+            br
+            |В 2007 г. РПЗ стал дипломантом Премии Правительства РФ в области качества за достижение значительных результатов в области качества.
+            br
+            br
+            |В 2013 г. предприятие вошло в состав Концерна «Радиоэлектронные технологии» (КРЭТ), управляемого госкорпорацией «Ростех» и объединяющего 97 предприятий по разработке и производству радиоэлектронной продукции военного и гражданского назначения. 
+
+
+
+
+    .pre-footer
+      .container
+        h1 КОНТАКТЫ
+        ul
+          li 
+            a(href="#") Пресс-служба
+          li 
+            a(href="#") Отдел кадров
+          li 
+            a(href="#") Службы предприятия
+    .footer
