@@ -1,0 +1,604 @@
+@import 'nib'
+
+global-reset()
+
+proxima = 'Proxima Nova', sans-serif
+bl = #1422E3 
+
+.container
+  position relative
+  margin 0 auto
+  clearfix()
+  text-align center
+
+body 
+  overflow hidden
+  
+mobile()
+  @media only screen and (max-width: 699px)
+    {block}
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2 / 3)
+    {block}
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40 / 71)
+    {block}
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)
+    {block}
+
+tablet()
+  @media screen and (min-width: 700px) and (max-width: 890px)
+    {block}
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+    {block}
+
+small_screen()
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1199px) and (orientation: portrait)
+    {block}
+
+hd()
+  @media only screen and (min-width: 1200px)
+    {block}
+normal()
+  @media only screen and (min-width: 890px) and (max-width:1200px)
+    {block}
+
+#header
+  clearfix()
+  position fixed
+  height 50px
+  display block
+  width 100%
+  background  #151515
+  z-index 9
+  text-align center
+  color #F3F3F3
+  top -50px
+  img
+    float left
+    height 28px
+    margin-left 50px
+    margin-top 12px
+    +tablet()
+      margin-left 10px
+    +mobile()
+      margin-left 10px
+  input[type="search"]
+    float right 
+    margin-right 75px
+    height 50px
+    border 0
+    background #353840
+    width 150px 
+    -webkit-appearance textfield
+    color #fff
+    padding-left 15px
+    z-index 1000
+    outline none
+    font-weight 100
+    font-family 'Open Sans', sans-serif
+    transition width 0.5s 
+    font-size 15px
+    +tablet()
+      margin-right 45px
+    +mobile()
+      display none
+    &:focus
+      transition width 0.8s 
+      width 200px
+    &::-webkit-search-cancel-button 
+      display none
+  .gosearch
+    position absolute
+    right 35px
+    top 0px
+    width 50px
+    height 50px
+    outline none
+    cursor pointer
+    background url('../images/search.png') no-repeat #3C3F48
+    background-size 50%
+    background-position 50%
+    border 0
+    z-index 1
+    transition background 0.2s
+    +tablet()
+      right 0
+    +mobile()
+      display none
+    &:hover
+      transition background 0.2s
+      background url('../images/search.png') no-repeat #464954
+      background-size 50%
+      background-position 50%
+  #nav
+    +tablet()
+      display none
+    +mobile()
+      display none
+    +small_screen()
+      display none
+    +normal()
+      display none
+    ul
+      width 800px 
+      margin 0 auto
+      li
+        transition background 0.3s
+        display inline-block
+        margin-left -3px
+        font-family 'Open Sans', sans-serif
+        font-weight 100
+        font-size 13px
+        padding 18.5px 11px 18.5px 11px
+        &:first-child
+          margin-left 0
+        &:hover
+          background #1422E3
+        a 
+          color #f3f3f3
+          text-decoration none
+  #nav-mobile
+    +hd()
+      display none
+    +small_screen()
+      display none
+    span
+      text-transform uppercase
+      font-family proxima
+      font-size 25px
+      position absolute
+      left 50%
+      transform translateX(-50%)
+      top 15px
+      cursor pointer
+      margin-bottom -50px
+    ul
+      display none
+      width 100%
+      margin 0 auto
+      margin-top 40px
+      li
+        background #151515
+        transition background 0.3s
+        font-family 'Open Sans', sans-serif
+        font-weight 100
+        text-align center
+        font-size 13px
+        padding 18.5px 11px 18.5px 11px
+        &:hover
+          background #1422E3
+        a 
+          color #f3f3f3
+          text-decoration none
+
+#header.open
+  top 0
+  transition top 0.35s 0.2s ease-out
+ 
+#fullPage
+  width 100%
+  .section
+    width 100vw
+    
+
+  .slide-1
+    background url('../images/firstbg.png') no-repeat
+    background-size cover
+  .slide-2
+    background url('../images/secondbg.png') no-repeat
+    background-position 50% 50%
+    background-size cover
+  .slide-3
+    background url('../images/thirdbg.png') no-repeat
+    background-position 50% 50%
+    background-size cover
+  .slide-4
+    background url('../images/fourthbg.png') no-repeat
+    background-position 50% 50%
+    background-size cover
+  .background
+      background rgba(0,0,0,0.3)
+      height 100%
+      width 100%
+      position absolute
+      top 0
+      left 0
+  .slide-0
+    .background
+      background rgba(0,0,0,0.7)
+    img
+      display block
+      margin 0 auto
+      width 50%
+      border-radius 10px
+      padding 20px 25px 20px 25px
+      +tablet()
+        width 75%
+      +mobile()
+        width 90%
+    button
+      display block
+      background url('../images/arrow-down.png') no-repeat
+      height 27px
+      outline none
+      border 0
+      cursor pointer
+      height 27px
+      -webkit-transform scale(0.6)
+      -ms-transform scale(0.6)
+      transform scale(0.6)
+      width 50px
+      position absolute 
+      left 0
+      right 0 
+      margin auto
+      bottom -35vh
+
+  .slide-1, .slide-2, .slide-3, .slide-4
+    h1
+      font-family proxima
+      font-weight 500
+      font-size 3vw
+      color #fff
+      +mobile()
+        font-size 7vw
+      +tablet()
+        font-size 5vw
+        margin-top 10vw
+    p
+      font-family proxima
+      font-size 1.1vw
+      color #fff
+      width 50vw
+      margin 0 auto
+      font-weight 100
+      line-height 26px
+      margin-top 23px
+      +tablet()
+        font-size 2vw
+        width 90vw
+      +mobile()
+        font-size 3.5vw
+        width 98vw 
+    img
+      margin-top 25px
+      height 106px
+      border-top 4px bl solid
+      padding-top 34px
+      
+    button
+      cursor pointer
+      outline none
+      font-family proxima
+      font-weight 100
+      font-size 15px
+      color #fff
+      width 235px
+      margin-top 50px
+      padding 10px 0 10px 0
+      border-radius 100px
+      border 3px #fff solid
+      background rgba(255, 255, 255, 0)
+      transition 0.4s
+      &:hover
+        transition 0.4s
+        background #fff
+        color #000
+        
+#wrapper
+  .header-in
+    background url('../images/headerin.png')
+    background-size cover
+    background-attachment fixed
+    margin-top 50px
+    height 173px
+    .container
+      color #fff
+      img
+        display inline-block
+        margin-top 35px
+        height 97px
+        vertical-align middle
+      p
+        vertical-align middle
+        margin-top 40px
+        margin-left 35px
+        display inline-block
+        font-size 20px
+        font-family proxima
+        color #2A2E78
+        font-weight 600
+  .content
+    background #fff
+    min-height 855px
+    .container
+      text-align left
+      .left-side
+        min-width 25vw
+        font-family proxima
+        float left
+        .active-li
+          border-bottom 4px bl solid
+          background #E9E9E9
+          color #1422E3
+          a
+            color bl
+        // width 373px  
+        ul
+          margin-left 57px
+          margin-top 74px
+          li
+            font-weight 600
+            font-size 20px
+            padding 15px 0px 10px 15px
+            width 200px
+            line-height 24px
+            height 50px
+            &:hover
+              background #E9E9E9
+            a
+              text-decoration none
+              color #151D84
+              
+              
+            
+      .right-side
+        width 75%
+        font-family proxima
+        float left
+        h1 
+          font-weight bold
+          font-size 28px
+          margin-top 71px
+        img
+          margin-top 45px
+        p
+          font-size 18px
+          width 80%
+          line-height 24px
+          margin-top 25px
+          width 85%
+          &:last-child
+            margin-bottom 50px
+      .right-side-2
+        font-family proxima
+        float left
+        h1 
+          font-weight bold
+          font-size 28px
+          margin-top 71px
+        img
+          margin-top 45px
+        p
+          font-size 18px
+          width 80%
+          line-height 24px
+          margin-top 25px
+          width 85%
+        .vakansii
+          display none
+          .nextpage
+            float right
+            margin-top 50px
+            margin-bottom 50px
+            background bl 
+            color #fff
+            border 0
+            padding 5px 15px 5px 15px
+            font-size 13px
+            outline none
+            &::after
+              content '>'
+              font-size 15px
+              margin-left 5px
+          .prevpage
+            display none
+            margin-bottom 50px
+            float left
+            margin-top 50px
+            background bl 
+            color #fff
+            border 0
+            padding 5px 15px 5px 15px
+            font-size 13px
+            outline none
+            &::before
+              content '<'
+              font-size 15px
+              margin-right 5px
+          .block
+            margin-top 25px
+            max-width 600px
+            min-width 600px
+            cursor pointer
+            &:last-child
+              margin-bottom 50px
+            .title
+              font-size 18px 
+              font-weight 600
+              display inline-block
+              vertical-align top
+              clearfix()
+            .price
+              top 0
+              clearfix()
+              font-size 18px
+              font-weight 600
+              display inline-block
+              color #1422E3
+              float right
+              width 70px
+              vertical-align top
+            .date
+              display block
+              margin-top 25px
+              font-size 12px
+              width 100%
+              padding-bottom 10px
+              border-bottom 2px #eee solid
+            .more
+              display none
+              .subtitle
+                margin-top 25px
+                font-size 15px
+                font-weight 600
+                color bl 
+              .text
+                margin-top 10px
+                line-height 22px
+                font-family 'Open Sans', sans-serif
+                font-size 13px
+              button
+                width 183px
+                border 0
+                background #1322F0
+                font-size 14px
+                text-transform uppercase
+                color #fff
+                margin 0 auto
+                padding 12px 13px 12px 13px
+                display block
+                margin-top 25px
+                margin-bottom 25px
+                outline none
+                cursor pointer
+                border-radius 100px
+          
+      .menu-right-side
+        margin-top 74px
+        font-family proxima
+        text-align center
+        float right
+        margin-right 84px
+        .title
+          font-size 18px
+          font-weight 600
+          color #1422E3
+        .podpiska
+          width 270px
+          margin 0 auto
+          input
+            margin 0 auto
+            height 34px
+            outline none
+            display block
+            border 0
+          input[type="text"]
+            text-align center 
+            margin-top 14px
+            width 248px
+            background #E9E9E9
+            font-size 15px
+          input[type="submit"]
+            width 250px
+            font-size 14px
+            color #fff
+            background #D8D8D8
+        .otdel
+          width 223px
+          height 335px
+          border 4px bl solid
+          margin 0 auto
+          margin-top 24px
+          img
+            margin-top 25px
+            height 130px
+          .title
+            color #000
+            margin-top 20px
+            margin-bottom 21px
+          p
+            color #000
+            font-size 17px
+            margin-bottom 10px
+          .email
+            font-family proxima
+            color #1422E3
+            text-decoration none
+            font-size 17px
+            margin-top 40px
+            display block
+        .rezume
+          margin-top 30px
+          input
+            margin 0 auto
+            height 34px
+            outline none
+            display block
+            border 0
+          input[type="text"]
+            text-align center 
+            margin-top 14px
+            width 248px
+            background #E9E9E9
+            font-size 15px
+          input[type="submit"]
+            width 250px
+            cursor pointer
+            font-size 14px
+            color #fff
+            background #D8D8D8
+            
+
+
+
+  .product 
+    margin-top 50px
+    .cube
+      font-family proxima
+      font-weight 500
+      font-size 1.2vw
+      width 25vw
+      height 25vw
+      float left
+      margin-left 6vw
+      margin-bottom 2vw 
+      background url('../images/payal.png') no-repeat #F7F7F7
+      background-position 50%
+      background-size 22vw
+      &:hover
+        background url('../images/payal.png') no-repeat #eee
+        background-position 50%
+        background-size 22vw
+      p
+        text-align center
+        margin-top 21vw
+  .pre-footer
+    height 173px
+    background url('../images/headerin.png') no-repeat
+    background-size cover
+    background-attachment fixed
+    .container
+      h1
+        width 155px
+        margin 0 auto
+        margin-top 35px
+        padding-bottom 12px
+        border-bottom 11px #292D78 solid
+        font-size 20px
+        font-family proxima
+        color #2A2E78
+        font-weight 600
+      ul
+        width 900px
+        margin 0 auto
+        margin-top 30px
+        li
+          text-align center
+          display inline-block
+          font-family proxima
+          font-size 18px
+          font-weight 600
+          margin-left 55px
+          a
+            text-decoration none
+            color #151D84  
+  .footer
+    background #000
+    height 50px
+    
+
+    
+  
+
+
+

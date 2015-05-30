@@ -1,0 +1,98 @@
+doctype html
+head
+  meta(name="viewport" content="width=device-width")
+  link(rel="stylesheet" href="stylesheets/app.css")
+  link(rel="stylesheet" href="http://i.icomoon.io/public/temp/58ba121031/UntitledProject/style.css")
+  meta(charset="utf-8")
+  title Раменский
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+
+  script.
+    require('main');
+    require('coffee');
+
+
+body
+  #header
+    a(href="index.html")
+      img(src="images/logo.png")
+    input(type="search" placeholder="Поиск")
+    button.gosearch
+    nav(id="nav" role="navigation")
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+          a(href="#") ОБРАТНАЯ СВЯЗЬ
+
+    nav(id="nav-mobile" role="navigation")
+      span.menu-btn меню  
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+          a(href="#") ОБРАТНАЯ СВЯЗЬ
+
+  #wrapper
+    .header-in
+      .container
+        img(src="images/logobig.png")
+        p РАМЕНСКИЙ ПРИБОРОСТРОИТЕЛЬНЫЙ ЗАВОД
+    .content
+      .container
+        .left-side
+          ul
+            li
+              a(href="politika.html") Политика в области качества
+            li
+              a(href="politika-2.html") Кадровая политика
+            li.active-li
+              a(href="politika-3.html") Социальная политика
+            li
+              a(href="politika-4.html") Охрана труда и экология
+        .right-side
+          h1 ПОЛИТИКА В ОБЛАСТИ КАЧЕСТВА
+          img(src="images/dontknow2.png")
+          p
+            |Ордена Трудового Красного знамени Раменский приборостроительный завод – 
+            |флагман отечественного авиационного приборостроения. 
+          p
+            |Специфика предприятия – выпуск современных пилотажно-навигационных приборов, 
+            |систем и комплексов для практически всех типов летательных аппаратов российского производства, 
+            |начиная с высокоманевренных истребителей семейства СУ и МИГ, самолетов  транспортной и стратегической авиации, 
+            |вертолетов Ка и Ми, гражданской авиационной техники, а также для подводных  и надводных кораблей Военно-Морского Флота. 
+          p
+            |Изделия РПЗ - это высокий уровень качества, о чем свидетельствует 
+            |Премия Правительства Российской Федерации по качеству за 2007 год. 
+            |Завод ежегодно постоянно набирает обороты, развивает производство,  
+            |модернизируется, улучшает условия труда, повышает культуру производства, стабильно повышает зарплату.
+    .pre-footer
+      .container
+        h1 КОНТАКТЫ
+        ul
+          li 
+            a(href="#") Пресс-служба
+          li 
+            a(href="#") Отдел кадров
+          li 
+            a(href="#") Службы предприятия
+    .footer

@@ -1,0 +1,90 @@
+doctype html
+head
+  meta(name="viewport" content="width=device-width")
+  link(rel="stylesheet" href="stylesheets/app.css")
+  link(rel="stylesheet" href="http://i.icomoon.io/public/temp/58ba121031/UntitledProject/style.css")
+  meta(charset="utf-8")
+  title Раменский
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+
+  script.
+    require('main');
+    require('coffee');
+
+
+body
+  #header
+    a(href="index.html")
+      img(src="images/logo.png")
+    input(type="search" placeholder="Поиск")
+    button.gosearch
+    nav(id="nav" role="navigation")
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+          a(href="#") ОБРАТНАЯ СВЯЗЬ
+
+    nav(id="nav-mobile" role="navigation")
+      span.menu-btn меню  
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+          a(href="#") ОБРАТНАЯ СВЯЗЬ
+
+  #wrapper
+    .header-in
+      .container
+        img(src="images/logobig.png")
+        p РАМЕНСКИЙ ПРИБОРОСТРОИТЕЛЬНЫЙ ЗАВОД
+    .product
+      .container
+        .cube
+          p ИЗМЕРИТЕЛЬНЫЕ ПРИБОРЫ
+        .cube
+          p ИНСТРУМЕНТЫ
+        .cube
+          p ПАЯЛЬНОЕ ОБОРУДОВАНИЕ
+        .cube
+          p ДАТЧИКИ ВЫСОТЫ
+        .cube
+          p ИЗМЕРИТЕЛЬНЫЕ ПРИБОРЫ
+        .cube
+          p ИНСТРУМЕНТЫ
+        .cube
+          p ПАЯЛЬНОЕ ОБОРУДОВАНИЕ
+        .cube
+          p ДАТЧИКИ ВЫСОТЫ
+        .cube
+          p ИЗМЕРИТЕЛЬНЫЕ ПРИБОРЫ
+    .pre-footer
+      .container
+        h1 КОНТАКТЫ
+        ul
+          li 
+            a(href="#") Пресс-служба
+          li 
+            a(href="#") Отдел кадров
+          li 
+            a(href="#") Службы предприятия
+    .footer

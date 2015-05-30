@@ -1,0 +1,92 @@
+doctype html
+head
+  meta(name="viewport" content="width=device-width")
+  link(rel="stylesheet" href="stylesheets/app.css")
+  link(rel="stylesheet" href="http://i.icomoon.io/public/temp/58ba121031/UntitledProject/style.css")
+  meta(charset="utf-8")
+  title Раменский
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+  script.
+    require('main');
+    require('coffee');
+body
+  #header
+    a(href="index.html")
+      img(src="images/logo.png")
+    input(type="search" placeholder="Поиск")
+    button.gosearch
+    nav(id="nav" role="navigation")
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+          a(href="#") ОБРАТНАЯ СВЯЗЬ
+
+    nav(id="nav-mobile" role="navigation")
+      span.menu-btn меню  
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+          a(href="#") ОБРАТНАЯ СВЯЗЬ
+
+  #fullPage
+    .section.slide-0
+      .background
+      .container
+        img.firstlogo(src="images/logoram1.png")
+        button.vniz
+    .section.slide-1
+      .background
+      .container
+        h1 СТАБИЛЬНАЯ ТОЧНОСТЬ
+        img(src="images/space.png")
+        p 
+          |Производим изделия спецтехники для войск ракетно-космической обороны.
+        button В КОСМОСЕ
+    .section.slide-2
+      .background
+      .container
+        h1 ОТНОСИТЕЛЬНАЯ ПОГРЕШНОСТЬ
+        img(src="images/plane.png")
+        p 
+          |Создаем новое поколение инерциальных навигационных систем для самых современных отечественных самолетов и вертолетов.
+        button В НЕБЕ
+    .section.slide-3
+      .background
+      .container
+        h1 СТАБИЛЬНАЯ ТОЧНОСТЬ
+        img(src="images/zemla.png")
+        p 
+          |Обеспечиваем высокую точность навигационного оборудования для сухопутной военной техники.
+        button НА ЗЕМЛЕ
+    .section.slide-4
+      .background
+      .container
+        h1 СТАБИЛЬНАЯ ТОЧНОСТЬ
+        img(src="images/metro.png")
+        p 
+          |Производим блоки путей автоматики для метрополитена.
+        button ПОД ЗЕМЛЕЙ
+
+  #loader.overlay-loader
+      .loader-background.color-flip
+      img.loader-icon.spinning-cog(src="cogs/cog03.svg" data-cog="cog03")

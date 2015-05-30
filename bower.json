@@ -1,0 +1,34 @@
+{
+  "name": "brunch-for-static",
+  "version": "0.0.0",
+  "authors": [
+    "molefrog <molefrog@gmail.com>",
+    "flywithme <boris@adimov.ru>"
+  ],
+  "description": "Brunch skeleton for fast prototyping static pages",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jquery.ui": "~1.11.4",
+    "jquery.slimscroll": "~1.3.3",
+    "fullpage": "~2.6.4",
+    "instafeed.js": "~1.3.2",
+    "BigVideo.js": "~1.1.5"
+  },
+  "overrides": {
+    "jquery.ui": {
+      "main": "ui/effect.js"
+    },
+    "instafeed.js": {
+      "main": "instafeed.min.js"
+    }
+  }
+}
