@@ -70,7 +70,7 @@ normal()
     width 150px 
     -webkit-border-radius 0
     border-radius 0
-    -webkit-appearance textfield
+    -webkit-appearance none
     color #fff
     padding-left 15px
     z-index 1000
@@ -158,6 +158,8 @@ normal()
       width 100%
       margin 0 auto
       margin-top 50px
+      +mobile()
+        margin-top 40px
       li
         background #151515
         transition background 0.3s
@@ -205,18 +207,19 @@ normal()
       top 0
       left 0
   .slide-0
+    width 100%
     .background
       background rgba(0,0,0,0.7)
     img
       display block
       margin 0 auto
-      width 50%
+      width 50vw
       border-radius 10px
       padding 20px 25px 20px 25px
       +tablet()
-        width 75%
+        width 80vw
       +mobile()
-        width 90%
+        width 80vw
     button
       display block
       background url('../images/arrow-down.png') no-repeat
@@ -288,7 +291,8 @@ normal()
         
 #wrapper
   .header-in
-    background url('../images/header.jpg') 
+    background url('../images/headerin-2.jpg') 
+    background-size cover
     background-attachment fixed
     background-position 50% 10%
     margin-top 50px
@@ -347,7 +351,7 @@ normal()
           li
             font-weight 600
             font-size 20px
-            padding 15px 1px 10px 15px
+            padding 15px 1px 25px 15px
             width 200px
             line-height 24px
             height 35px
@@ -628,7 +632,7 @@ normal()
         margin-top 21vw
   .pre-footer
     height 173px
-    background url('../images/header.jpg') no-repeat
+    background url('../images/headerin-2.jpg') no-repeat
     background-position 50% 90%
     background-size cover
     background-attachment fixed

@@ -5,13 +5,19 @@ $(document).ready(function() {
         css3: true,
         scrollingSpeed: 600,
         autoScrolling: true,
+        verticalCentered: true,
         fitToSection: true,
         scrollBar: false,
-        responsive: '800',
+        responsive: '600',
         resize: true,
         easingcss3: 'ease-in-out',
         touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5
+        normalScrollElementTouchThreshold: 5,
+        afterRender: function reBuildThis(){
+            setTimeout(function(){
+                $.fn.fullpage.reBuild();
+            }, 1000);
+        }
     });
 
 
@@ -50,9 +56,15 @@ $(document).ready(function() {
 
 
 $(document).ready(function(){
+
     BV = new $.BigVideo({container: $('.slide-0')});
     BV.init();
-    BV.show('video.mp4',{ambient:true});
+
+    if (Modernizr.touch) {
+        BV.show('video-poster.jpg');
+    } else {
+        BV.show('video.mp4',{ambient:true});
+    }
 });
 
 
