@@ -2,7 +2,7 @@ doctype html
 head
   meta(name="viewport" content="width=device-width")
   link(rel="stylesheet" href="stylesheets/app.css")
-  link(rel="stylesheet" href="http://i.icomoon.io/public/temp/58ba121031/UntitledProject/style.css")
+    
   meta(charset="utf-8")
   title Раменский
 
@@ -12,7 +12,7 @@ head
 
   script.
     require('main');
-    require('coffee');
+     
 
 
 body
@@ -34,7 +34,7 @@ body
         li 
           a(href="rabota.html") КАРЬЕРА
         li 
-          a(href="#") ОБРАТНАЯ СВЯЗЬ
+           a(href="contact-info.html") ОБРАТНАЯ СВЯЗЬ
 
     nav(id="nav-mobile" role="navigation")
       span.menu-btn меню  
@@ -50,13 +50,13 @@ body
         li 
           a(href="rabota.html") КАРЬЕРА
         li 
-          a(href="#") ОБРАТНАЯ СВЯЗЬ
+           a(href="contact-info.html") ОБРАТНАЯ СВЯЗЬ
 
   #wrapper
     .header-in
       .container
-        img(src="images/logobig.png")
-        p РАМЕНСКИЙ ПРИБОРОСТРОИТЕЛЬНЫЙ ЗАВОД
+        img(src="images/логотип.png")
+         
     .content
       .container
         .left-side
@@ -75,8 +75,9 @@ body
           h1 НОВОСТИ
           .vakansii
             .block
-              p.title Финансовые результаты РПЗ ЗАО за I квартал 2015 года
-              p.date 18 мая 2015
+              .info
+                p.title Финансовые результаты РПЗ ЗАО за I квартал 2015 года
+                p.date 18 мая 2015
               .more
                 p.text 
                   |Опыт работы: 3 года. Высшее профессиональное (техническое) образование.  
@@ -98,16 +99,18 @@ body
                   |Опыт работы: 3 года. Высшее профессиональное (техническое) образование.  
                   |стаж работы по специальности в газоперерабатывающей отрасли на инженерно-технических  и руководящих должностях
             .block
-              p.title Финансовые результаты РПЗ ЗАО за I квартал 2015 года
-              p.date 18 мая 2015
+              .info
+                p.title Финансовые результаты РПЗ ЗАО за I квартал 2015 года
+                p.date 18 мая 2015
               .more
                 p.text 
                   |Опыт работы: 3 года. Высшее профессиональное (техническое) образование.  
                   |стаж работы по специальности в газоперерабатывающей отрасли на инженерно-технических  и руководящих должностях
                   |Cтарший механик производства подготовки и розлива углеводных фракций. инженер.
             .block
-              p.title Финансовые результаты РПЗ ЗАО за I квартал 2015 года
-              p.date 18 мая 2015
+              .info
+                p.title Финансовые результаты РПЗ ЗАО за I квартал 2015 года
+                p.date 18 мая 2015
               .more
                 p.text 
                   |Опыт работы: 3 года. Высшее профессиональное (техническое) образование.  
@@ -131,4 +134,14 @@ body
             a(href="#") Отдел кадров
           li 
             a(href="#") Службы предприятия
-    .footer
+     .footer
+      a(href="index.html").left РАМЕНСКИЙ ПРИБОРОСТРОИТЕЛЬНЫЙ ЗАВОД
+      .center
+        a(href="http://www.youtube.com/channel/UCO9yikFjO3N9z2h5Q_QTT-Q" target="_blank")
+          img(src="images/youtube.png")
+        a(href="https://vk.com/public94963536" target="_blank")
+          img(src="images/vk.png")
+      a.right(href="http://www.YOUROCKDUDE.com" target="_blank") YOUROCKDUDE.COM
+  #loader.overlay-loader
+    .loader-background.color-flip
+    img.loader-icon.spinning-cog(src="cogs/cog03.svg" data-cog="cog03")

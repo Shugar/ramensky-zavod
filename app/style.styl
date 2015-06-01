@@ -13,7 +13,14 @@ bl = #1422E3
 
 body 
   overflow hidden
-  
+
+#fp-nav
+  ul
+    li
+      a
+        span
+          border 2px #fff solid
+          background none
 mobile()
   @media only screen and (max-width: 699px)
     {block}
@@ -130,7 +137,7 @@ normal()
         font-family 'Open Sans', sans-serif
         font-weight 100
         font-size 13px
-        padding 18.5px 11px 18.5px 11px
+        padding 18.5px 7px 18.5px 7px
         &:first-child
           margin-left 0
         &:hover
@@ -153,6 +160,8 @@ normal()
       top 15px
       cursor pointer
       margin-bottom -50px
+      +tablet()
+        font-size 26px
     ul
       display none
       width 100%
@@ -168,6 +177,8 @@ normal()
         text-align center
         font-size 13px
         padding 18.5px 11px 18.5px 11px
+        +tablet()
+          font-size 23px
         &:hover
           background #1422E3
         a 
@@ -206,6 +217,9 @@ normal()
       position absolute
       top 0
       left 0
+  #big-video-image
+    padding 0 !important
+    width 100vw !important
   .slide-0
     width 100%
     .background
@@ -245,19 +259,19 @@ normal()
       font-size 3vw
       color #fff
       +mobile()
-        font-size 7vw
+        font-size 6vw
       +tablet()
         font-size 5vw
         margin-top 10vw
     p
       font-family proxima
-      font-size 1.1vw
+      font-size 1.5vw
       color #fff
       width 50vw
       margin 0 auto
       font-weight 100
       line-height 26px
-      margin-top 23px
+      margin-top 40px
       +tablet()
         font-size 2vw
         width 90vw
@@ -323,22 +337,22 @@ normal()
     width 100vw
     .container
       text-align left
+      .podzag
+        font-size 25px
+        margin-top 25px
+        font-weight 600
       .left-side
         width 25vw
         font-family proxima
         float left
         
         .active-li
-          border-bottom 4px bl solid
-          background #E9E9E9
+          // background #E9E9E9
           color #1422E3
-          +tablet()
-            border-width 3px
-          +mobile()
-            border-width 3px
           a
             color bl
-        // width 373px  
+            &:hover
+              color bl
         ul
           margin-left 4vw
           margin-top 52px
@@ -355,19 +369,22 @@ normal()
             width 200px
             line-height 24px
             height 35px
+            margin-top 5px
+            border-bottom 1px #eee solid
             +tablet()
               width 100vw
-              padding 15px 0 0 0 
+              padding 10px 0 5px 0 
+              font-size 18px
               text-align center
             +mobile()
               width 100vw
-              padding 15px 0 0 0 
+              padding 10px 0 5px 0 
               text-align center
-            &:hover
-              background #E9E9E9
             a
               text-decoration none
               color #151D84
+              &:hover
+                color #FFD100
           
               
             
@@ -382,26 +399,38 @@ normal()
           margin-left 7vw
           width 90%
         +mobile()
-          width 100%
+          width 95%
           margin-left 5vw
         h1 
           font-weight bold
           font-size 28px
           margin-top 71px
-        img
+        .content-photo
           margin-top 45px
-          width 65vw
-          +mobile()
-            width 90vw 
+          +normal()
+            width 60vw
           +tablet()
-            width 85vw         
+            width 85vw
+          +mobile()
+            width 85vw            
         .photo
             height 450px
             margin-top -45px
             float right
             margin-left 15px
-            margin-bottom 50px
+            margin-bottom 74px
             clearfix()
+            +normal()
+              margin-right -72px
+            +tablet()
+              margin-right -30px
+            +mobile()
+              float none
+              height 100vw
+              margin 0 auto
+              text-align center
+              margin-top 25px
+              margin-bottom -10px
         p
           font-size 18px
           width 85%
@@ -413,6 +442,10 @@ normal()
             width 94%
           &:last-child
             margin-bottom 50px
+        .name-bold
+          font-weight 600
+        .dolzh
+          font-style italic
       .right-side-2
         font-family proxima
         float left
@@ -469,7 +502,8 @@ normal()
           .block
             margin-top 25px
             width 45vw
-            cursor pointer
+            .info
+              cursor pointer
             +tablet()
               width 85vw
             +mobile()
@@ -561,6 +595,10 @@ normal()
             font-size 14px
             color #fff
             background #D8D8D8
+            cursor pointer
+            transition background .2s
+            &:hover
+              background #BDBDBD
         .otdel
           width 223px
           height 335px
@@ -593,10 +631,13 @@ normal()
             outline none
             display block
             border 0
-          input[type="text"]
+          input[type="file"]
             text-align center 
             margin-top 14px
-            width 248px
+            width 240px
+            height 24px
+            padding-top 10px
+            padding-left 10px
             background #E9E9E9
             font-size 15px
           input[type="submit"]
@@ -605,12 +646,47 @@ normal()
             font-size 14px
             color #fff
             background #D8D8D8
+            transition background .2s
+            &:hover
+              background #BDBDBD
+            
             
 
 
-
+  .pre-product
+    a
+      cursor pointer
+      outline none
+      font-family proxima
+      font-weight 100
+      font-size 23px
+      width 50%
+      display inline-block
+      padding 50px 0 10px 0
+      height 60px
+      background #0B126F
+      color white
+      text-decoration none
+      transition 0.2s
+      +mobile()
+        width 100%
+        display block
+      &:first-child
+        margin-left 0
+      &:hover
+        transition 0.2s
+        background bl
+        color #fff
+    .active
+      background #161FA3
+      color #fff 
+      
   .product 
     margin-top 50px
+    +tablet()
+      margin-top 0
+    +mobile()
+      margin-top 0 
     .cube
       font-family proxima
       font-weight 500
@@ -623,15 +699,31 @@ normal()
       background url('../images/payal.png') no-repeat #F7F7F7
       background-position 50%
       background-size 22vw
+      +tablet()
+        margin 0 0 0 0
+        width 50vw 
+        border-bottom 2px #eee solid
+        height 50vw
+        background-size 35vw
+      +mobile()
+        width 100vw
+        height 100vw
+        border-bottom 2px #eee solid
+        background-size 60vw
+        margin 0 0 0 0
       &:hover
-        background url('../images/payal.png') no-repeat #eee
-        background-position 50%
-        background-size 22vw
+        background-color #eee
       p
         text-align center
-        margin-top 21vw
+        margin-top 22vw
+        +tablet()
+          margin-top 40vw
+          font-size 2.5vw
+        +mobile()
+          margin-top 76vw
+          font-size 3.5vw
   .pre-footer
-    height 173px
+    min-height 173px
     background url('../images/headerin-2.jpg') no-repeat
     background-position 50% 90%
     background-size cover
@@ -642,10 +734,10 @@ normal()
         margin 0 auto
         margin-top 35px
         padding-bottom 12px
-        border-bottom 11px #292D78 solid
+        border-bottom 11px #fff solid
         font-size 20px
         font-family proxima
-        color #2A2E78
+        color #fff
         font-weight 600
       ul
         margin 0 auto
@@ -657,16 +749,87 @@ normal()
           font-size 18px
           font-weight 600
           margin-left 55px
+          +mobile()
+            display block
+            margin-left 0
+            margin-top 10px
+            &:last-child
+              margin-bottom 50px
           a
             text-decoration none
-            color #151D84  
-  .footer
+            color #fff
+   .footer
     background #000
-    height 50px
-    
-
-    
+    height 70px
+    position relative
+    a
+      text-decoration none
+      font-family proxima
+      color #fff
+    .right
+      float right
+      margin-right 3vw
+      margin-top 30px
+      font-size 13px
+      &::before
+        content 'сделано в'
+        padding-right 6px
+        color #bfbfbf
+    .left 
+      float left
+      margin-top 30px
+      font-size 13px
+      margin-left 3vw
+    .center
+      position absolute
+      left 50%
+      transform translateX(-50%)
+      top 15px
+      a 
+        margin-left 25px
+        img
+          height 42px
+          border-radius 100
+        &:first-child
+          margin-left 0
   
+    
+  .contact
+    min-height 660px
+    h1
+      font-weight bold
+      font-size 28px
+      font-family proxima
+      margin-top 50px
+      margin-bottom 50px
+      text-align center
+    p
+      margin-top 15px
+      font-size 18px
+      font-family proxima
+      text-align left
+      margin-left 5vw
+      width 90vw
+      line-height 24px
+      +mobile()
+        font-size 4vw
+        line-height 7vw
+        width 90vw
+    #map-canvas
+      min-height 300px
+      width 90vw
+      margin 0 auto
+      margin-top 50px
+      a[href^="http://maps.google.com/maps"]
+        display none !important
+      .gm-style-cc 
+        display none
+
+      .gmnoprint a, .gmnoprint span 
+        display none
+      
+      .gmnoprint div 
+        background none !important
 
 
 

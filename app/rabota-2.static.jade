@@ -1,0 +1,117 @@
+doctype html
+head
+  meta(name="viewport" content="width=device-width")
+  link(rel="stylesheet" href="stylesheets/app.css")
+    
+  meta(charset="utf-8")
+  title Раменский
+
+  script(src="javascripts/vendor.js")
+  script(src="javascripts/app.js")
+  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp")
+
+  script.
+    require('main');
+     
+
+
+body
+  #header
+    a(href="index.html")
+      img(src="images/logo.png")
+    input(type="search" placeholder="Поиск")
+    button.gosearch
+    nav(id="nav" role="navigation")
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+           a(href="contact-info.html") ОБРАТНАЯ СВЯЗЬ
+
+    nav(id="nav-mobile" role="navigation")
+      span.menu-btn меню  
+      ul
+        li
+          a(href="info.html") О КОМПАНИИ
+        li 
+          a(href="product.html") ПРОДУКЦИЯ И УСЛУГИ
+        li 
+          a(href="press.html") ПРЕСС-ЦЕНТР
+        li 
+          a(href="politika.html") ПОЛИТИКА ПРЕДПРИЯТИЯ
+        li 
+          a(href="rabota.html") КАРЬЕРА
+        li 
+           a(href="contact-info.html") ОБРАТНАЯ СВЯЗЬ
+
+  #wrapper
+    .header-in
+      .container
+        img(src="images/логотип.png")
+         
+    .content
+      .container
+        .left-side
+          ul
+            li
+              a(href="rabota.html") Вакансии
+            li.active-li 
+              a(href="rabota-2.html") Истории успеха
+            li
+              a(href="rabota-3.html") Обращение к кандидатам
+            li
+              a(href="rabota-4.html") Образовательные программы
+        .right-side
+          h1 ИСТОРИЯ УСПЕХА
+          img.content-photo(src="images/dontknow.png")
+          p
+            |Дмитрий Рекунов, начальник конструкторско-технологического отдела лазерной гироскопии.
+            br
+            br
+            |В 2005 г. окончил Брянский государственный технический университет. Магистр техники и технологии. Параллельно с обучением работал в одном из научно-технических центров г. Брянска.
+            br
+            br
+            |На РПЗ был принят в апреле 2005 г. мастером производственного участка лазерной гироскопии. Помимо выполнения основных задач, проявлял инициативу в решении вопросов, касающихся программирования, и через год был переведен в отдел главного конструктора инженером-программистом. В новой должности Дмитрий зарекомендовал себя талантливым целеустремленным специалистом, способным решать также прикладные задачи, и спустя еще 3 года возглавил конструкторское бюро, в котором трудился. 
+            br
+            br
+            |В 2014 г., когда было принято решение о создании производственного отдела лазерной гироскопии (ПОЛГ), Дмитрий был назначен заместителем начальника отдела. С 1 марта 2015 г., после реструктуризации ПОЛГ, Дмитрий возглавляет конструкторско-технологический отдел лазерной гироскопии. Под руководством молодого лидера КТО ЛГ решает весь спектр задач по разработке и сопровождению изделий на базе лазерных гироскопов.
+            br
+            br
+            |В работе на РПЗ Дмитрий ценит возможности самореализации в выбранной профессии, а также применения и совершенствования имеющихся знаний. 
+            br
+            br
+            |В свободное время играет на электрогитаре в музыкальной группе.
+
+
+
+
+    .pre-footer
+      .container
+        h1 КОНТАКТЫ
+        ul
+          li 
+            a(href="#") Пресс-служба
+          li 
+            a(href="#") Отдел кадров
+          li 
+            a(href="#") Службы предприятия
+     .footer
+      a(href="index.html").left РАМЕНСКИЙ ПРИБОРОСТРОИТЕЛЬНЫЙ ЗАВОД
+      .center
+        a(href="http://www.youtube.com/channel/UCO9yikFjO3N9z2h5Q_QTT-Q" target="_blank")
+          img(src="images/youtube.png")
+        a(href="https://vk.com/public94963536" target="_blank")
+          img(src="images/vk.png")
+      a.right(href="http://www.YOUROCKDUDE.com" target="_blank") YOUROCKDUDE.COM
+  #loader.overlay-loader
+    .loader-background.color-flip
+    img.loader-icon.spinning-cog(src="cogs/cog03.svg" data-cog="cog03")
+   
