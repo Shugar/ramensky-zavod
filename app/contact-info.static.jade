@@ -3,7 +3,7 @@ head
   meta(name="viewport" content="width=device-width")
   link(rel="stylesheet" href="stylesheets/app.css")
   meta(charset="utf-8")
-  title Раменский
+  title РПЗ
 
   script(src="javascripts/vendor.js")
   script(src="javascripts/app.js")
@@ -58,14 +58,44 @@ body
     .contact
       .container
         h1 ОБРАТНАЯ СВЯЗЬ
-        p Почтовый адрес – 140100, Московская область, г. Раменское, ул. Михалевича, 39.
-        p Телефон (приемная генерального директора) - +7 (495) 995 94 03
-        p 
-          |Факс +7 (495) 995 94 22  |     
-          |+7 (496) 46 3 59 51
-        p Почта 
-          a(href="mailto:pochta@rpz.ru") pochta@rpz.ru
 
+        .right-contact
+          p.title АО Раменский Приборостроительный Завод
+          p 
+            |140100, Московская область, г. Раменское, 
+            br
+            |ул. Михалевича, 39.
+          
+          p.title Телефон   
+          p
+            |+7 (495) 995 94 03
+          
+          p.title Факс
+          p
+            |+7 (495) 995 94 22 |     
+            |+7 (496) 46 3 59 51
+          
+          p.title E-mail
+          p
+            a(href="mailto:pochta@rpz.ru") pochta@rpz.ru
+        .left-contact
+          .main 
+            form 
+              .field 
+                label(for="n") Имя
+                input(type="text" id="n" placeholder="ваше имя")
+              .field 
+                label(for="ln") E-mail
+                input(type="text" id="ln" placeholder="ваш e-mail")
+              .any
+                select 
+                  option По какому вопросу
+                  option Трудоустройство
+                  option Закупка
+              .any
+                textarea
+              .any
+                input(type="submit")
         #map-canvas
     .pre-footer
       .container
